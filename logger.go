@@ -255,7 +255,7 @@ func SetStdoutThreshold(level Level) {
 // SetLogFile sets the LogHandle to a io.writer created for the file behind the given file path.
 // Will append to this file.
 func SetLogFile(path string) error {
-	file, err := os.OpenFile(path, os.O_RDWR|os.O_APPEND|os.O_CREATE, 0666)
+	file, err := os.OpenFile(path, os.O_RDWR|os.O_APPEND|os.O_CREATE, 0640)
 	if err != nil {
 		return err
 	}
